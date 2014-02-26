@@ -13,7 +13,17 @@ function FluidPlugin(game, opts) {
 
   this.registerFluid('water');
   this.registerFluid('lava');
+
+  this.enable();
 }
+
+FluidPlugin.prototype.enable = function() {
+  // TODO: add tick handler to spread, see voxel-virus
+};
+
+FluidPlugin.prototype.disable = function() {
+};
+
 
 var ucfirst = function(s) {
   return s.substr(0, 1).toUpperCase() + s.substring(1);
