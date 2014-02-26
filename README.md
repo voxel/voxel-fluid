@@ -1,0 +1,6 @@
+# voxel-fluid
+
+## License
+
+MIT
+
