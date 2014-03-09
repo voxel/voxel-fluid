@@ -33,14 +33,14 @@ FluidPlugin.prototype.registerFluid = function(name) {
   var still = this.registry.registerBlock(name, {
     texture: name + '_still',
     fluid: name,
-    displayName: 'Still ' + ucfirst(name)
+    displayName: ucfirst(name) + ' Source'
   });
 
   var flow = this.registry.registerBlock(name + 'Flow', {
     texture: name + '_flow',
     fluid: name,
     flowing: true,
-    displayName: 'Flowing ' + ucfirst(name)
+    displayName: ucfirst(name) + ' Flow' // outflow effluent
   });
   // TODO: multiple blocks for different heights
 
