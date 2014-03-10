@@ -1,5 +1,7 @@
 'use strict';
 
+var ucfirst = require('ucfirst');
+
 module.exports = function(game, opts) {
   return new FluidPlugin(game, opts);
 };
@@ -24,10 +26,6 @@ FluidPlugin.prototype.enable = function() {
 FluidPlugin.prototype.disable = function() {
 };
 
-
-var ucfirst = function(s) {
-  return s.substr(0, 1).toUpperCase() + s.substring(1);
-};
 
 FluidPlugin.prototype.registerFluid = function(name) {
   var still = this.registry.registerBlock(name, {
