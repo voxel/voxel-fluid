@@ -30,6 +30,7 @@ FluidPlugin.prototype.disable = function() {
 FluidPlugin.prototype.registerFluid = function(name) {
   var still = this.registry.registerBlock(name, {
     texture: name + '_still',
+    transparent: true,
     fluid: name,
     displayName: ucfirst(name) + ' Source',
     creativeTab: 'fluids'
@@ -37,6 +38,7 @@ FluidPlugin.prototype.registerFluid = function(name) {
 
   var flow = this.registry.registerBlock(name + 'Flow', {
     texture: name + '_flow',
+    transparent: true,
     fluid: name,
     flowing: true,
     displayName: ucfirst(name) + ' Flow', // outflow effluent
