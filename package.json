@@ -2,16 +2,20 @@
   "name": "voxel-fluid",
   "description": "fluid registration (voxel.js plugin)",
   "version": "0.0.1",
+  "main": "fluid.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:deathcap/voxel-fluid.git"
   },
   "keywords": [
-    "voxel"
+    "voxel",
+    "plugin",
+    "fluid",
+    "liquid",
+    "registry"
   ],
   "dependencies": {
     "ucfirst": "0.0.1"
   },
-  "peerDependencies": {},
   "license": "MIT"
 }
