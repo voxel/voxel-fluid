@@ -26,10 +26,22 @@ FluidPlugin.prototype.enable = function() {
 FluidPlugin.prototype.disable = function() {
 };
 
-
 FluidPlugin.prototype.registerFluid = function(name) {
   var still = this.registry.registerBlock(name, {
     texture: name + '_still',
+    // cube - custom model causes 2nd phase render
+    blockModel: [
+      {from: [0,0,0],
+      to: [16,16,16],
+      faceData: {
+          down: {},
+          up: {},
+          north: {},
+          south: {},
+          west: {},
+          east: {}},
+      texture: name + '_still',
+      }],
     transparent: true,
     fluid: name,
     displayName: ucfirst(name) + ' Source',
@@ -38,7 +50,18 @@ FluidPlugin.prototype.registerFluid = function(name) {
 
   var flow = this.registry.registerBlock(name + 'Flow', {
     texture: name + '_flow',
-    transparent: true,
+    blockModel: [
+      {from: [0,0,0],
+      to: [16,16,16],
+      faceData: {
+          down: {},
+          up: {},
+          north: {},
+          south: {},
+          west: {},
+          east: {}},
+      texture: name + '_flow',
+      }],
     fluid: name,
     flowing: true,
     displayName: ucfirst(name) + ' Flow', // outflow effluent
