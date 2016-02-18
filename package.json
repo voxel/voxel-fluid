@@ -15,7 +15,7 @@
     "registry"
   ],
   "dependencies": {
-    "ucfirst": "0.0.1"
+    "ucfirst": "1.0.0"
   },
   "license": "MIT"
 }
